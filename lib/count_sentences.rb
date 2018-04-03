@@ -18,7 +18,7 @@ class String
       sentences = self.split(".").
         flat_map{ |sentences| sentences.split("!")}.
         flat_map{ |question| question.split("?")}
-      sentences.length
+      sentences.count
   end
 end
 
