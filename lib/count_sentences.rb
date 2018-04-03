@@ -15,7 +15,7 @@ class String
   end
 
   def count_sentences
-      a = self.split(".").map{ |sentences| sentences.split("!")}.map{ |question| question.split("?")}
+      a = self.split(".").flat_map{ |sentences| sentences.split("!")}.flat_map{ |question| question.split("?")}
       binding.pry
   end
 end
