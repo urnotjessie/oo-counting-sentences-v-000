@@ -15,10 +15,10 @@ class String
   end
 
   def count_sentences
-      a = self.split(".").
+      sentences = self.split(".").
         flat_map{ |sentences| sentences.split("!")}.
         flat_map{ |question| question.split("?")}
-      binding.pry
+      sentences.length
   end
 end
 
